@@ -8,9 +8,9 @@ function Home() {
     <section className="container-h">
       <div className="content">
         <h3>Welcome to my Git <div className="icon"><BsEmojiSmile /></div></h3>
-        <p>where you will find a list<br/>
-        of all my public repos.<br/>
-        Have a nice time exploring <FaRegHandshake />.
+        <p className='para_cont'>where you will find a list<br/>
+        of all my public repositories.<br/>
+        Have a great time exploring <FaRegHandshake />.
         </p>
         <a href="/Repos"><button >Find Now</button></a>
       </div>

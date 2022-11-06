@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@1,197&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700;900&display=swap");
 .section__title {
     text-align: center;
     color: #ff5800;
@@ -42,6 +43,9 @@
     cursor: pointer;
     padding: 15px;
     padding-left: 25px;
+    padding-top: 30px;
+    font-family: 'Fuzzy Bubbles', cursive;
+    box-shadow: 2px 2px 5px #0c0600;
 }
 
 .single-repo:hover {
