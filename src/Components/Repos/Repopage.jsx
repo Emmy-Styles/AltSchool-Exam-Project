@@ -1,29 +1,45 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 
-const RepoPage = ({ repos }) => {
-  console.log(repos);
+const RepoPage = () => {
+  
+  const {Repopage} = useParams();
+  const Repos = () => {
+    const [repos, setRepos] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [color, setColor] = useState("rgb(34, 104, 184)");
+  
+    const URL = "https://api.github.com/users/Emmy-Styles/repos";
+  
+    const fetchRepo = () => {
+      setLoading(true);
+      axios
+        .get(URL)
+        .then((response) => {
+          setRepos(response.data);
+        })
+        .catch((error) => {
+          if (error) {
+            throw new Error("error!!");
+          }
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    };
+  
+    useEffect(() => {
+      fetchRepo();
+    }, []);
+
+    const displayOneRepo = repos.find(singlerepo => Repopage == singlerepo.name)
+    console.log(repos)
 
   return (
-    <>
-    <div className="container">
-            <div class="row">
-              <div class="section__title padd__15">
-                <h2>My Repositories</h2>
-              </div>
-            </div>
-          </div>
-      {repos.map((rep, index) => (
-        <div key={index} className='single-repo'>
-          <dl>
-            <dt>Name : {rep.description}</dt>
-            <dd>visibility : {rep.created_at}</dd>
-            <dd>{rep.language}</dd>
-          </dl>
-        </div>
-      ))}
-    </>
+      <h1>{Repopage}</h1>
   )
-}
-
+}}
 export default RepoPage
