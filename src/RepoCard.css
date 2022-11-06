@@ -1,0 +1,52 @@
+.section__title {
+    text-align: center;
+    color: #ff5800;
+}
+
+/* .user__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    margin: 10px;
+    background-size: contain;
+    background: blueviolet;
+} */
+
+/* .body {
+    display: flex;
+}
+.head {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    background-color: aquamarine;
+}
+
+.bodyrep {
+    color: black;
+} */
+
+.single-repo {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    width: 375px;
+    height: 150px;
+    word-wrap: break-word;
+    background-color: rgb(156, 198, 247);
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #ff5800;
+    cursor: pointer;
+    padding: 15px;
+    padding-left: 25px;
+}
+
+.single-repo:hover {
+    background-color: rgb(129, 122, 153);
+    box-shadow: 5px 5px 10px 5px #0c0600;
+    transition: 0.3s;
+    color: #fff;
+}

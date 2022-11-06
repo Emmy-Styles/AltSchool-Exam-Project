@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@1,197&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700;900&display=swap");
+.main-footer {
+    color: #333;
+    background-color: #8ec4f0;
+    padding-top: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Fuzzy Bubbles', cursive;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+
+  }
+
+  .list-unstyled {
+    color: #ff5800;
+    align-items: center;
+    justify-content: center;
+  }

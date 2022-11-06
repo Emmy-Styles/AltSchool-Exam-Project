@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@1,197&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700;900&display=swap");
+
+.contain {
+  width: fit-content;
+  height: 100%;
+}
+
+.about_page {
+  min-width: 800px;
+  background-color: #fff;
+  height: 100%;
+  background-size: cover;
+  max-width: 1536px;
+}
+
+.p-header {
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: medium;
+  color: rgb(0, 0, 0);
+  padding-top: 100px;
+  border-bottom: 3px solid rgb(245, 144, 77);
+  max-width: 50px;
+  position: relative;
+  left: 400px;
+  justify-content: center;
+  margin-left: 17%;
+  
+}
+
+.para {
+  color: rgb(34, 104, 184);
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: small;
+  text-align: center;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 25px;
+  word-spacing: 2px;
+  /* background: rgb(241, 245, 247); */
+  background: rgb(216, 219, 228);
+  border-radius: 10px;
+  box-shadow: 2px 3px 2px 3px rgb(158, 164, 177);
+}
+
+@media (max-width: 1024px) {
+    .contain {
+        max-width: 100px;
+        height: 100%;
+      }
+
+    .para {
+    display: flex;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 250px;
+    font-size: smaller;
+    padding: 3px;
+    }  
+
+.p-header {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+    }
+}
+@media (max-width: 768px) {
+    .contain {
+        max-width: 800px;
+        height: 100%;
+      }
+
+    .para {
+    display: flex;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 350px;
+    font-size: smaller;
+    padding: 30px;
+    }  
+
+.p-header {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 50%;
+    padding-left: 0;
+    }
+}
+@media (max-width: 480px) {
+    .contain {
+        max-width: 50px;
+        height: 100%;
+      }
+
+    .para {
+    display: flex;
+    text-align: center;
+    margin-left: 1%;
+    margin-right: 550px;
+    font-size: smaller;
+    padding: 3px;
+    }  
+
+.p-header {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 50%;
+    padding-left: 0;
+    }
+}
+
