@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useEffect, CSSProperties } from "react";
+import React, { useState, useEffect } from "react";
 import "./Repos.css";
 import RepoCard from "../../RepoCard";
 import Pagination from "../../Pagination";

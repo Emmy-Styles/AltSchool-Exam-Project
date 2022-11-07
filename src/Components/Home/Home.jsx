@@ -1,18 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Home.css'
 import { BsEmojiSmile } from "react-icons/bs"
 import { FaRegHandshake } from "react-icons/fa"
 
 function Home() {
+
+  const [error, setError] = useState(false);
+if (error) {throw Error("Something went wrong");}
+
+
   return (
     <section className="container-h">
       <div className="content">
         <h3>Welcome to my Git <div className="icon"><BsEmojiSmile /></div></h3>
-        <p className='para_cont'>where you will find a list<br/>
-        of all my public repositories.<br/>
+        <p className='para_cont'>Click on this button to<br/>
+        test my error boundary.<br/>
         Have a great time exploring <FaRegHandshake />.
         </p>
-        <a href="/Repos"><button >Find Now</button></a>
+        <button onClick={() => setError(true)}>Test</button>
       </div>
     </section>
   );

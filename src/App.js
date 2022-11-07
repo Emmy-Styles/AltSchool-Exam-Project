@@ -7,7 +7,7 @@ import ErrorPage from './Pages/404page'
 import RepoPage from "./Components/Repos/Repopage";
 import Layout from "./Pages/Layout";
 import { ErrorBoundary } from "react-error-boundary"
-import Footer from "./Components/Footer/Footer";
+// import Footer from "./Components/Footer/Footer";
 import Foot from "./Components/Footer/Foot";
 
 

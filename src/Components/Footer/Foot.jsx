@@ -32,7 +32,7 @@ return (
 			<FooterLink href="#">
 			<i className="fab fa-facebook-f">
 				<span style={{ marginLeft: "10px" }}>
-				Facebook
+				
 				</span>
                 <BsFacebook />
 			</i>
@@ -40,7 +40,7 @@ return (
 			<FooterLink href="#">
 			<i className="fab fa-instagram">
 				<span style={{ marginLeft: "10px" }}>
-				Instagram
+				
                 <BsInstagram />
 				</span>
 			</i>
@@ -48,7 +48,7 @@ return (
 			<FooterLink href="#">
 			<i className="fab fa-twitter">
 				<span style={{ marginLeft: "10px" }}>
-				Twitter
+				
                 <BsTwitter />
 				</span>
 			</i>
@@ -56,7 +56,7 @@ return (
 			<FooterLink href="#">
 			<i className="fab fa-youtube">
 				<span style={{ marginLeft: "10px" }}>
-				Youtube
+				
                 <BsYoutube />
 				</span>
 			</i>
