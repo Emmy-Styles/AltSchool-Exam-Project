@@ -16,6 +16,7 @@ function App() {
   function errorBoundary ({error})  {
     return<div>
       <h1>Sorry, this page has crashed!</h1>
+      <button to={"/Repos"}>Back</button>
       {error.message}
       </div>
 }
@@ -28,7 +29,7 @@ function App() {
           <Route path="/" element={<Layout />}>     
           <Route index element={<Home />} />
           <Route path="/Repos" element={<Repos />} />
-          <Route path="/Repos/:Repopage" element={<RepoPage />} />
+          <Route path="/Cards/:name" element={<RepoPage />} />
           <Route path="/About" element={<About />} />
           <Route path="*" element={<ErrorPage />} />
           </Route>

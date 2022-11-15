@@ -1,16 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@1,197&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700;900&display=swap");
 
 .contain {
-  width: fit-content;
-  height: 100%;
+  width: 100%;
 }
 
 .about_page {
   min-width: 800px;
   background-color: #fff;
-  height: 100%;
   background-size: cover;
-  max-width: 1536px;
 }
 
 .p-header {
@@ -81,7 +78,7 @@
     }  
 
 .p-header {
-    text-align: left;
+    text-align: center;
     margin-left: 0;
     margin-right: 50%;
     padding-left: 0;
@@ -94,19 +91,13 @@
       }
 
     .para {
-    display: flex;
     text-align: center;
-    margin-left: 1%;
-    margin-right: 550px;
     font-size: smaller;
-    padding: 3px;
+    max-width: 120px;
     }  
 
 .p-header {
-    text-align: left;
-    margin-left: 0;
-    margin-right: 50%;
-    padding-left: 0;
+        align-items: center;
     }
 }
 

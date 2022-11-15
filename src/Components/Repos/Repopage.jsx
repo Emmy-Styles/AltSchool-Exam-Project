@@ -1,45 +1,20 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import React from "react";
+import { useParams } from "react-router-dom";
 
-
-const RepoPage = () => {
-  
-  const {Repopage} = useParams();
-  const Repos = () => {
-    const [repos, setRepos] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [color, setColor] = useState("rgb(34, 104, 184)");
-  
-    const URL = "https://api.github.com/users/Emmy-Styles/repos";
-  
-    const fetchRepo = () => {
-      setLoading(true);
-      axios
-        .get(URL)
-        .then((response) => {
-          setRepos(response.data);
-        })
-        .catch((error) => {
-          if (error) {
-            throw new Error("error!!");
-          }
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    };
-  
-    useEffect(() => {
-      fetchRepo();
-    }, []);
-
-    const displayOneRepo = repos.find(singlerepo => Repopage == singlerepo.name)
-    console.log(repos)
+const RepoPage = ({ repos }) => {
+  const { name } = useParams();
 
   return (
-      <h1>{Repopage}</h1>
-  )
-}}
-export default RepoPage
+    <div className="single_card">
+      {repos.filter((repo) => repo.name === name).map((repo, index) => (
+          <div key={index} className="card">
+            <h1>{repo.name}</h1>
+            <p>{repo.description}</p>
+            <p>{repo.created_at}</p>
+            <p>{repo.language}</p>
+          </div>
+        ))}
+    </div>
+  );
+};
+export default RepoPage;

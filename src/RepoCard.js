@@ -16,7 +16,7 @@ const RepoCard = ({ repos }) => {
       {repos.map((repo, index) => (
         <div key={index} className='single-repo'>
         <dl>
-        <Link to={`/Repos/${repo.name}`}><dt>Name : {repo.name} </dt></Link>
+        <Link to={`/Cards/${repo.name}`}><dt> <h1> Name : {repo.name} </h1> </dt></Link>
           <dd>visibility : {repo.visibility}</dd>
           <dd>Created : {repo.created_at}</dd>
           <dd>Description : {repo.description}</dd>

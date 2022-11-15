@@ -4,6 +4,7 @@ import "./Repos.css";
 import RepoCard from "../../RepoCard";
 import Pagination from "../../Pagination";
 import BeatLoader from "react-spinners/BeatLoader";
+import RepoPage from "./Repopage";
 
 const Repos = () => {
   const [repos, setRepos] = useState([]);
@@ -40,6 +41,7 @@ const Repos = () => {
   const firstPostIndex = lastPostIndex - pagePerShow;
 
   const currentPosts = repos.slice(firstPostIndex, lastPostIndex);
+  <RepoPage repos={currentPosts}/>
 
   return (
     <section class="service section">
@@ -65,6 +67,7 @@ const Repos = () => {
           // repos={repos}
         />
       </div>
+      
           </div>
           
         )}
