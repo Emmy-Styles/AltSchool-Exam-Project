@@ -41,7 +41,8 @@ const Repos = () => {
   const firstPostIndex = lastPostIndex - pagePerShow;
 
   const currentPosts = repos.slice(firstPostIndex, lastPostIndex);
-  <RepoPage repos={currentPosts}/>
+  
+  
 
   return (
     <section class="service section">
@@ -67,7 +68,7 @@ const Repos = () => {
           // repos={repos}
         />
       </div>
-      
+      <RepoPage repos={currentPosts} />
           </div>
           
         )}

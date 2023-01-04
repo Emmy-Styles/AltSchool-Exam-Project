@@ -3,18 +3,17 @@ import { useParams } from "react-router-dom";
 
 const RepoPage = ({ repos }) => {
   const { name } = useParams();
-
+  const repo = repos.find((repo) => repo.name === name)
+  const { description, created_at, language } = repo
   return (
-    <div className="single_card">
-      {repos.filter((repo) => repo.name === name).map((repo, index) => (
-          <div key={index} className="card">
-            <h1>{repo.name}</h1>
-            <p>{repo.description}</p>
-            <p>{repo.created_at}</p>
-            <p>{repo.language}</p>
-          </div>
-        ))}
-    </div>
+    <section className="single_card">
+      <div className="container">
+            <h1>{name}</h1>
+            <p>{description}</p>
+            <p>{created_at}</p>
+            <p>{language}</p>
+      </div>
+    </section>
   );
 };
 export default RepoPage;
