@@ -1,99 +1,57 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { FiAlignRight, FiXCircle } from "react-icons/fi";
-import logo from "../../Images/logo.png";
-import "./Nav.css";
+import { NavLink, Link } from "react-router-dom";
+import "./Navbar.css";
+import { HiMenu } from "react-icons/hi"
+import { AiOutlineClose } from "react-icons/ai"
+import SideNav  from "./SideNav"
+
 
 const Navbarmenu = () => {
-  const [isMenu, setisMenu] = useState(false);
-  const [isResponsiveclose, setResponsiveclose] = useState(false);
-  const toggleClass = () => {
-    setisMenu(isMenu === false ? true : false);
-    setResponsiveclose(isResponsiveclose === false ? true : false);
-  };
-
-  let boxClass = ["main-menu menu-right menuq1"];
-  if (isMenu) {
-    boxClass.push("menuq2");
-  } else {
-    boxClass.push("");
-  }
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const toggleMenu = () => {
+      setIsOpen(!isOpen);
+    }
 
 
   return (
-    <header className="header__middle">
-      <div className="container">
-        <div className="row">
-          {/* Add Logo  */}
-          <div className="header__middle__logo">
-            <NavLink exact activeClassName="is-active" to="/">
-              <img src={logo} alt="logo" />
+    <>
+    <div className="navbar">
+      <nav className="nav__list">
+        <Link to={"/"}>
+          <i className="fab fa-github"></i>
+        </Link>
+        <ul className="nav__links">
+          <li>
+            <NavLink className="links" to={"/"}>
+              Home
             </NavLink>
-          </div>
+          </li>
+          <li>
+            <NavLink className="links" to={"/Repos"}>
+              Repos
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="links" to={"/About"}>
+              About
+            </NavLink>
+          </li>
+        </ul>
+        <button onClick={toggleMenu} className="toggle_menu">
+        {isOpen ? <AiOutlineClose /> : <HiMenu />}
+      </button>
+      {isOpen && <SideNav />}
+        
+        {/* <button className="toggle_menu" id="toggleMenu">
+          <i className="fas fa-bars" id="active_menu"></i>
+        </button> */}
+      </nav>
+    </div>
+    
+    </>
 
-          <div className="header__middle__menus">
-            <nav className="main-nav ">
-              {/* Responsive Menu Button */}
-              {isResponsiveclose === true ? (
-                <>
-                  <span
-                    className="menubar__button"
-                    style={{ display: "none" }}
-                    onClick={toggleClass}
-                  >
-                    {" "}
-                    <FiXCircle />{" "}
-                  </span>
-                </>
-              ) : (
-                <>
-                  <span
-                    className="menubar__button"
-                    style={{ display: "none" }}
-                    onClick={toggleClass}
-                  >
-                    {" "}
-                    <FiAlignRight />{" "}
-                  </span>
-                </>
-              )}
 
-              <ul className={boxClass.join(" ")}>
-                <li className="menu-item">
-                  <NavLink
-                    exact
-                    activeClassName="is-active"
-                    onClick={toggleClass}
-                    to={`/`}
-                  >
-                    {" "}
-                    Home{" "}
-                  </NavLink>
-                </li>
-                <li className="menu-item ">
-                  <NavLink
-                    onClick={toggleClass}
-                    activeClassName="is-active"
-                    to={`/Repos`}>
-                    Repos
-                  </NavLink>
-                </li>
-                <li className="menu-item ">
-                  <NavLink
-                    onClick={toggleClass}
-                    activeClassName="is-active"
-                    to={`/Contact`}
-                  >
-                    {" "}
-                    Contact{" "}
-                  </NavLink>{" "}
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
   );
 };
 

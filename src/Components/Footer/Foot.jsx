@@ -8,12 +8,13 @@ Column,
 FooterLink,
 Heading,
 } from "./FootStyles";
+import './Footer.css'
 
 const Foot = () => {
 return (
-	<Box>
-	<Container>
-		<Row>
+	<Box className="footer_main_container">
+	<Container className="footer_inner_container">
+		<Row className="footer_flex_row">
 		<Column>
 			<Heading>About Us</Heading>
 			<FooterLink href="#">Aim</FooterLink>
@@ -34,14 +35,14 @@ return (
 				<span style={{ marginLeft: "10px" }}>
 				
 				</span>
-                <BsFacebook />
+                
 			</i>
 			</FooterLink>
 			<FooterLink href="#">
 			<i className="fab fa-instagram">
 				<span style={{ marginLeft: "10px" }}>
 				
-                <BsInstagram />
+                
 				</span>
 			</i>
 			</FooterLink>
@@ -49,7 +50,7 @@ return (
 			<i className="fab fa-twitter">
 				<span style={{ marginLeft: "10px" }}>
 				
-                <BsTwitter />
+                
 				</span>
 			</i>
 			</FooterLink>
@@ -57,7 +58,7 @@ return (
 			<i className="fab fa-youtube">
 				<span style={{ marginLeft: "10px" }}>
 				
-                <BsYoutube />
+                
 				</span>
 			</i>
 			</FooterLink>

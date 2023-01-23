@@ -1,39 +1,51 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './RepoCard.css'
+import React from "react";
+import { icons } from "react-icons";
+import { Link } from "react-router-dom";
+import "./RepoCard.css";
+import { MdOpenInFull } from "react-icons/md";
 
 const RepoCard = ({ repos }) => {
-  console.log(repos)
-  
   return (
     <>
-    <div className="container">
-            <div class="row">
-              <div class="section__title">
-                <h2>My Repositories</h2>
+      <div className="container">
+        {repos.map((repo, index) => (
+          <Link to={`/repos/${repo.name}`} key={index} className="single-repo">
+            <div>
+              <div className="repoIcon">
+                  <div>
+                      <h1>{repo.name} </h1>
+                  </div>
+                  <div>
+                    <MdOpenInFull />
+                  </div>
               </div>
+              <p>{repo.description}</p>
             </div>
-          
-      {repos.map((repo, index) => (
-        <div key={index} className='single-repo'>
-        <dl>
-        <Link to={`/repos/${repo.name}`}><dt> <h1> Name : {repo.name} </h1> </dt></Link>
-          <dd>visibility : {repo.visibility}</dd>
-          <dd>Created : {repo.created_at}</dd>
-          <dd>Description : {repo.description}</dd>
-          <dt>Language : {repo.language}</dt>
-        </dl>
-        
+          </Link>
+        ))}
       </div>
-      
-         
-        
-        
-        
-      ))}
-    </div>
     </>
-  )
-}
+  );
+};
 
-export default RepoCard
+export default RepoCard;
+
+{
+  /* <Link
+                  to={`repo/${repo.name}`}
+                  key={repo.name}
+                  className="repoBox"
+                >
+                  <div>
+                    <div className="repoIcon">
+                      <div>
+                        <h3>{repo.name}</h3>
+                      </div>
+                      <div>
+                        <RepoLink />
+                      </div>
+                    </div>
+                    <p>{repo.description}</p>
+                  </div>
+                </Link> */
+}

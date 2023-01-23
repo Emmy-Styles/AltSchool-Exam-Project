@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import './Pagination.css'
 
 const Pagination = ({
   totalPosts,
@@ -19,7 +20,7 @@ const Pagination = ({
     e.preventDefault();
     console.log(totalPosts);
 
-    if (currentPage === 3) {
+    if (currentPage === 2) {
       setCurrentPage(1);
     } else {
       setCurrentPage(currentPage + 1);
@@ -29,14 +30,14 @@ const Pagination = ({
   const prevPage = (e) => {
     e.preventDefault();
     if (currentPage === 1) {
-      setCurrentPage(3);
+      setCurrentPage(2);
     } else {
       setCurrentPage((prev) => prev - 1);
     }
   };
 
   return (
-    <div>
+    <div className="pagination">
       <motion.button
         whileTap={{ scale: 0.8 }}
         transition={{ duration: 0.5 }}

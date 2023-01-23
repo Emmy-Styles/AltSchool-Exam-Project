@@ -1,0 +1,41 @@
+.pages__btns {
+    background-color: #fff;
+    color: #333;
+    border-color: lightseagreen !important;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 5px;
+    margin: 20px 10px;
+}
+
+.pages__btns:hover {
+    background-color: lightblue;
+}
+
+.active__page {
+    background-color: lightseagreen;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 5px;
+    margin: 20px 10px;
+}
+
+.active__page:hover {
+    background-color: lightblue;
+}
+
+.pagination {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    
+}

@@ -3,21 +3,23 @@
 .header__middle{
   /* background-color: #9fcaee; */
   background-color: #8ec4f0;
-}
-.container {
-  color: #07a8ff;
   width: 100%;
-  height: fit-content;
+}
+.row {
+  color: #242729;
+  display: flex;
+  /* height: fit-content; 
   padding-top: 0%;
 	padding-right:15px;
 	padding-left:15px;
 	margin-right:auto;
-	margin-left:auto
+	margin-left:auto */
 
 }
 img {
-  height: 100%;
+  /* height: 100%; */
   width: 12%;
+  position: relative;
 }
 
 .sec__one h1{

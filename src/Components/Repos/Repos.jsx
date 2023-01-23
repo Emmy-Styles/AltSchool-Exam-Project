@@ -4,14 +4,14 @@ import "./Repos.css";
 import RepoCard from "../../RepoCard";
 import Pagination from "../../Pagination";
 import BeatLoader from "react-spinners/BeatLoader";
-import RepoPage from "./Repopage";
+import '../../RepoCard.css'
 
 const Repos = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentpage] = useState(1);
-  const [pagePerShow, setPagePerShow] = useState(2);
-  let [color, setColor] = useState("rgb(34, 104, 184)");
+  const [pagePerShow, setPagePerShow] = useState(8);
+  let [color, setColor] = useState("lightseagreen");
 
   const URL = "https://api.github.com/users/Emmy-Styles/repos";
 
@@ -54,6 +54,7 @@ const Repos = () => {
             size={20}
             aria-label="Loading Spinner"
             data-testid="loader"
+            className="loader"
           />
         ) : (
           <div>
@@ -68,7 +69,6 @@ const Repos = () => {
           // repos={repos}
         />
       </div>
-      <RepoPage repos={currentPosts} />
           </div>
           
         )}
