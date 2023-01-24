@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const Box = styled.div`
-padding: 60px 60px;
+padding: 40px 40px;
 background: lightseagreen;
 position: relative;
 bottom: 0;
@@ -26,7 +26,7 @@ export const Container = styled.div`
 export const Column = styled.div`
 display: flex;
 flex-direction: column;
-text-align: left;
+text-align: center;
 margin-left: 60px;
 `;
 
@@ -44,7 +44,7 @@ grid-gap: 20px;
 
 export const FooterLink = styled.a`
 color: black;
-margin-bottom: 20px;
+margin-bottom: 10px;
 font-size: 18px;
 text-decoration: none;
 
@@ -57,7 +57,7 @@ text-decoration: none;
 export const Heading = styled.p`
 font-size: 24px;
 color: #333;
-margin-bottom: 40px;
+margin-bottom: 20px;
 font-weight: bold;
 // text-decoration: underline;
 font-family: sans-serif;

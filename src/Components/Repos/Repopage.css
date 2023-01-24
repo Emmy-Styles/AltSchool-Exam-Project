@@ -59,6 +59,10 @@ button.back {
   font-weight: normal;
   padding: 10px 14px;
 }
+.view p:hover {
+  color: #333;
+  transition: .5s;
+}
 .view:before,
 .btn__primary:before {
   transition: 0.5s;
@@ -79,10 +83,14 @@ button.back {
   text-shadow: 0 0 15px #f8f7ee;
 }
 
+
 .btn__primary:hover {
   text-shadow: 0 0 15px lightseagreen;
 }
 
+.back__icon {
+  padding-top: 4px;
+}
 .proj_Name {
   display: flex;
   align-items: center;

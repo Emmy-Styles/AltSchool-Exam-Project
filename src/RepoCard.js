@@ -8,21 +8,21 @@ const RepoCard = ({ repos }) => {
   return (
     <>
       <div className="container">
-        {repos.map((repo, index) => (
-          <Link to={`/repos/${repo.name}`} key={index} className="single-repo">
-            <div>
-              <div className="repoIcon">
+          {repos.map((repo, index) => (
+            <Link to={`/repos/${repo.name}`} key={index} className="single-repo">
+              <div>
+                <div className="repoIcon">
                   <div>
-                      <h1>{repo.name} </h1>
+                    <h1 className="heading">{repo.name} </h1>
                   </div>
                   <div>
-                    <MdOpenInFull />
+                    <MdOpenInFull className="icon-item"/>
                   </div>
-              </div>
-              <p>{repo.description}</p>
-            </div>
-          </Link>
-        ))}
+                </div>
+                <p>{repo.description}</p>
+              </div>              
+            </Link>
+          ))}
       </div>
     </>
   );
@@ -48,4 +48,7 @@ export default RepoCard;
                     <p>{repo.description}</p>
                   </div>
                 </Link> */
+
 }
+
+// single-repo

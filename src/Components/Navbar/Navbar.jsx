@@ -41,7 +41,7 @@ const Navbarmenu = () => {
         <button onClick={toggleMenu} className="toggle_menu">
         {isOpen ? <AiOutlineClose /> : <HiMenu />}
       </button>
-      {isOpen && <SideNav />}
+      {isOpen ? <SideNav /> : null}
         
         {/* <button className="toggle_menu" id="toggleMenu">
           <i className="fas fa-bars" id="active_menu"></i>
@@ -56,3 +56,5 @@ const Navbarmenu = () => {
 };
 
 export default Navbarmenu;
+
+

@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import "./Repopage.css";
 import BeatLoader from "react-spinners/BeatLoader";
-import { AiOutlineRollback as Back } from "react-icons/ai";
+import { GiReturnArrow as Back } from "react-icons/gi";
 import { BsGithub as Github } from "react-icons/bs";
 import { AiOutlineFork as Fork } from "react-icons/ai";
 import { GoIssueReopened as Issues } from "react-icons/go";
@@ -61,7 +61,7 @@ const RepoPage = () => {
               <div key={index} className="repo__container">
                 <Link to="/repos">
                   <button className="btn__primary">
-                      <Back />
+                      <Back className="back__icon"/>
                       &nbsp;Back to Repos
                   </button>
                 </Link>

@@ -4,7 +4,7 @@ import "./About.css";
 const About = () => {
   return (
     <div className="contain">
-      <h2 className="p-header">About</h2>
+      {/* <h2 className="p__header">About</h2> */}
       <div className="para">
         <div className="txt-box">
       <p>
