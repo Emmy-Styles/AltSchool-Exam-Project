@@ -179,3 +179,12 @@ button.back {
   justify-content: center;
   padding: 8rem;
 }
+
+
+@media (max-width: 505px) {
+	.view p {
+    font-size: 0.75rem;
+    padding: 0;
+    font-weight: lighter;
+  }
+}

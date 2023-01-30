@@ -1,99 +1,51 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { FiAlignRight, FiXCircle } from "react-icons/fi";
-import logo from "../../Images/git.png";
+import {React, useState} from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import "./Nav.css";
 
-const Navbarmenu = () => {
-  const [isMenu, setisMenu] = useState(false);
-  const [isResponsiveclose, setResponsiveclose] = useState(false);
-  const toggleClass = () => {
-    setisMenu(isMenu === false ? true : false);
-    setResponsiveclose(isResponsiveclose === false ? true : false);
+const Nav = () => {
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(!clicked);
   };
 
-  let boxClass = ["main-menu menu-right menuq1"];
-  if (isMenu) {
-    boxClass.push("menuq2");
-  } else {
-    boxClass.push("");
-  }
-
-
   return (
-    <div className="header__middle">
-        <div className="row">
-          {/* Add Logo  */}
-          <div className="header__middle__logo">
-            <NavLink exact activeClassName="is-active" to="/">
-              <img src={logo} alt="logo"  />
-              
-            </NavLink>
-          </div>
+    <>
+      <nav>
+        <Link to={"/"} className="logo-link">
+          <div className="logo">
+            <div>
+              <i className="fab fa-github"></i>
+            </div>
+            <div className="logo__text">
+              <h3>Xplore</h3>
+            </div> 
+          </div>        
+        </Link>
 
-          <div className="header__middle__menus">
-            <nav className="main-nav ">
-              {/* Responsive Menu Button */}
-              {isResponsiveclose === true ? (
-                <>
-                  <span
-                    className="menubar__button"
-                    style={{ display: "none" }}
-                    onClick={toggleClass}
-                  >
-                    {" "}
-                    <FiXCircle />{" "}
-                  </span>
-                </>
-              ) : (
-                <>
-                  <span
-                    className="menubar__button"
-                    style={{ display: "none" }}
-                    onClick={toggleClass}
-                  >
-                    {" "}
-                    <FiAlignRight />{" "}
-                  </span>
-                </>
-              )}
-
-              <ul className={boxClass.join(" ")}>
-                <li className="menu-item">
-                  <NavLink
-                    exact
-                    activeClassName="is-active"
-                    onClick={toggleClass}
-                    to={`/`}
-                  >
-                    {" "}
-                    Home{" "}
-                  </NavLink>
-                </li>
-                <li className="menu-item ">
-                  <NavLink
-                    onClick={toggleClass}
-                    activeClassName="is-active"
-                    to={`/Repos`}>
-                    Repositories
-                  </NavLink>
-                </li>
-                <li className="menu-item ">
-                  <NavLink
-                    onClick={toggleClass}
-                    activeClassName="is-active"
-                    to={`/About`}
-                  >
-                    {" "}
-                    About{" "}
-                  </NavLink>{" "}
-                </li>
-              </ul>
-            </nav>
-          </div>
+        <div>
+          <ul id="navbar" className={clicked ? "#navbar active" : "#navbar"}>
+            <li>
+              <NavLink to={"/"}>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/repos"}>Repos</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/about"}>About</NavLink>
+            </li>
+          </ul>
         </div>
-    </div>
+
+        <div id="mobile" onClick={handleClick}>
+          <i
+            id="bar"
+            className={clicked ? "fas fa-times" : "fas fa-bars"}
+          ></i>
+        </div>
+      </nav>
+    </>
   );
 };
 
-export default Navbarmenu;
+export default Nav;

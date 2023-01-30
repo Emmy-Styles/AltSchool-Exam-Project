@@ -11,7 +11,7 @@ const Repos = () => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentpage] = useState(1);
   const [pagePerShow, setPagePerShow] = useState(8);
-  let [color, setColor] = useState("lightseagreen");
+  // let [color, setColor] = useState("lightseagreen");
 
   const URL = "https://api.github.com/users/Emmy-Styles/repos";
 
@@ -49,7 +49,7 @@ const Repos = () => {
       <div className="user__section">
         {loading ? (
           <BeatLoader
-            color={color}
+            color={'lightseagreen'}
             loading={loading}
             size={20}
             aria-label="Loading Spinner"

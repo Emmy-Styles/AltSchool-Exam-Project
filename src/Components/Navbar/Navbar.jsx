@@ -1,60 +1,59 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./Navbar.css";
-import { HiMenu } from "react-icons/hi"
-import { AiOutlineClose } from "react-icons/ai"
-import SideNav  from "./SideNav"
 
 
 const Navbarmenu = () => {
-    const [isOpen, setIsOpen] = useState(false);
-  
-    const toggleMenu = () => {
-      setIsOpen(!isOpen);
-    }
+    const [isMobile, setIsMobile] = useState(false);
 
 
   return (
-    <>
-    <div className="navbar">
-      <nav className="nav__list">
-        <Link to={"/"}>
-          <i className="fab fa-github"></i>
-        </Link>
-        <ul className="nav__links">
+      <nav className="nav__bar">
+        {/* <Link to={"/"} className="logo-link">
+          <div className="logo">
+            <div>
+              <i className="fab fa-github"></i>
+              </div>
+            <div className="logo__text">
+              <h3>Xplore</h3>
+              </div> 
+          </div>        
+        </Link> */}
+
+        <ul 
+          className={ isMobile ? "nav__links__mobile" : "nav__links" }
+          onClick={() => setIsMobile(false)}
+          >
           <li>
-            <NavLink className="links" to={"/"}>
+            <NavLink className="home" to={"/"}>
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink className="links" to={"/Repos"}>
+            <NavLink className="repos" to={"/Repos"}>
               Repos
             </NavLink>
           </li>
           <li>
-            <NavLink className="links" to={"/About"}>
+            <NavLink className="about" to={"/About"}>
               About
             </NavLink>
           </li>
-        </ul>
-        <button onClick={toggleMenu} className="toggle_menu">
-        {isOpen ? <AiOutlineClose /> : <HiMenu />}
-      </button>
-      {isOpen ? <SideNav /> : null}
-        
-        {/* <button className="toggle_menu" id="toggleMenu">
-          <i className="fas fa-bars" id="active_menu"></i>
-        </button> */}
+        </ul>       
+        <button className="mobile__menu__icon"
+        onClick={() => setIsMobile(!isMobile)}
+        >
+          { isMobile ? ( 
+            <i className="fas fa-times"></i>
+            ) : ( 
+              <i className="fas fa-bars"></i>
+            )}
+        </button>
       </nav>
-    </div>
-    
-    </>
 
 
   );
 };
-
 export default Navbarmenu;
 
 

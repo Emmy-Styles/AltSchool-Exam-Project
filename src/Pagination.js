@@ -44,7 +44,7 @@ const Pagination = ({
         className="pages__btns"
         onClick={prevPage}
       >
-        prev
+        Prev
       </motion.button>
 
       {pages.map((page, index) => {
@@ -68,7 +68,7 @@ const Pagination = ({
         className="pages__btns"
         onClick={nextPage}
       >
-        next
+        Next
       </motion.button>
     </div>
   );
