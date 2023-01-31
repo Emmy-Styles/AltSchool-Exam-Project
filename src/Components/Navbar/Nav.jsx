@@ -1,4 +1,4 @@
-import {React, useState} from 'react';
+import {React, useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import "./Nav.css";
 
@@ -7,6 +7,24 @@ const Nav = () => {
 
   const handleClick = () => {
     setClicked(!clicked);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (event.target.id !== "mobile" && event.target.id !== "bar") {
+        setClicked(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+
+  const hideSidebar = () => {
+    setClicked(false);
   };
 
   return (
@@ -26,13 +44,13 @@ const Nav = () => {
         <div>
           <ul id="navbar" className={clicked ? "#navbar active" : "#navbar"}>
             <li>
-              <NavLink to={"/"}>Home</NavLink>
+              <NavLink onClick={hideSidebar} to={"/"}>Home</NavLink>
             </li>
             <li>
-              <NavLink to={"/repos"}>Repos</NavLink>
+              <NavLink onClick={hideSidebar} to={"/repos"}>Repos</NavLink>
             </li>
             <li>
-              <NavLink to={"/about"}>About</NavLink>
+              <NavLink onClick={hideSidebar} to={"/about"}>About</NavLink>
             </li>
           </ul>
         </div>
