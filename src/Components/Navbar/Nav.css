@@ -82,7 +82,7 @@ nav {
     height: 100vh;
     background: rgb(7, 138, 131);
     z-index: 1;
-    box-shadow: 40px 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 40px 0 10px 10px rgba(190, 247, 228, 0.911);
     padding: 40px 0 0 10px;
     transition: 0.3s ease-in-out;
   }
@@ -101,19 +101,7 @@ nav {
   }
 
   #mobile i {
-    font-size: 24px;
+    font-size: 35px;
     cursor: pointer;
   }
 }
-
-/* @media (min-width: 635px) and (max-width: 768px) {
-  #navbar {
-    height: 71vh;
-  }
-}
-
-@media (min-width: 620px) and (max-width: 634px) {
-  #navbar {
-    height: 73vh;
-  }
-} */

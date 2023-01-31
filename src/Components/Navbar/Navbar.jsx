@@ -9,7 +9,7 @@ const Navbarmenu = () => {
 
   return (
       <nav className="nav__bar">
-        {/* <Link to={"/"} className="logo-link">
+        <Link to={"/"} className="logo-link">
           <div className="logo">
             <div>
               <i className="fab fa-github"></i>
@@ -18,7 +18,7 @@ const Navbarmenu = () => {
               <h3>Xplore</h3>
               </div> 
           </div>        
-        </Link> */}
+        </Link>
 
         <ul 
           className={ isMobile ? "nav__links__mobile" : "nav__links" }
