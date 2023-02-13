@@ -1,28 +1,88 @@
-import React, {useState} from 'react'
-import './Home.css'
-import { BsEmojiSmile } from "react-icons/bs"
-import { FaRegHandshake } from "react-icons/fa"
+import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Home.css";
+// import axios from "axios";
+import { BsSearch } from "react-icons/bs"
 
-function Home() {
+const Home = ({ setUser }) => {
+  const [searchInput, setSearchInput] = useState("");
+  // const [userdata, setUserdata] = useState([]);
+  // const [loading, setLoading] = useState(false);
+  // const [filteredData, setFilteredData] = ([]);
 
-  const [error, setError] = useState(false);
-if (error) {throw Error("Something went wrong");}
+  // const URL = "https://api.github.com/users";
 
+  // const fetchUserData = () => {
+  //   setLoading(true);
+  //   axios
+  //     .get(URL)
+  //     .then((response) => {
+  //       setUserdata(response.data);
+  //     })
+  //     .catch((error) => {
+  //       if (error) {
+  //         throw new Error("error!!");
+  //       }
+  //     })
+  //     .finally(() => {
+  //       setLoading(false);
+  //     });
+  // };
+
+  // useEffect(() => {
+  //   fetchUserData();
+  // }, []);
+
+  // const handleChange = (handleInput, handleFilter) => event => {
+  //   handleInput(event);
+  //   handleFilter(event);
+  // };
+
+  const handleInput = (e) => {
+    setSearchInput(e.target.value);
+  };
+
+  // const handleFilter = (e) => {
+  //   const searchWord = e.target.value;
+  //   const newFilter = userdata.filter((value) => {
+  //     return value.login.includes(searchWord)
+  //   }) 
+  //   setFilteredData(newFilter);
+  // }
+  setUser(searchInput);
 
   return (
-    <section className="container-h">
-      <div className="content">
-        <div className="modal-box">
-        <h3>Welcome to my Git <div className="icon"><BsEmojiSmile /></div></h3>
-        <p className='para_cont'>Click on this button to<br/>
-        test my error boundary.<br/>
-        Have a great time exploring <FaRegHandshake className='handshake'/>.
-        </p>
-        <button className='pages_btns' onClick={() => setError(true)}>Test</button>
-        </div>
+    <div className="search">
+      <div > 
+      <form className="searchInputs">
+        <input
+          type="text"
+          placeholder="Github Username"
+          value={searchInput}
+          onChange={handleInput}
+        />
+        <Link to={searchInput ? "/Repos" : null} className="iconLink">
+        <button type="submit" className="searchIcon"><BsSearch /></button>
+        </Link>
+        </form>
+        
+        
       </div>
-    </section>
+      {/* {userdata.length !== 0 && (
+        
+        <div className="dataResult">
+        {userdata.map((value, key) => {
+          return <a className="dataItem" href={value.html_url} target="_blank" rel="noreferrer">
+            {" "}
+            {value.login}{" "} 
+            </a>
+        })}
+        </div>
+      )}    */}
+      
+    </div>
   );
-}
+};
 
 export default Home;

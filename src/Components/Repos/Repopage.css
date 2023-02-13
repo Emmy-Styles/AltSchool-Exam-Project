@@ -93,6 +93,7 @@ button.back {
 }
 .proj_Name {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px 10px 20px;
@@ -143,6 +144,10 @@ button.back {
   cursor: pointer;
 }
 
+.statsBox p {
+  color: #333;
+}
+
 .statsBox:nth-child(5n + 1) {
   background-color: #e6f3f7;
   box-shadow: 0px 5px 10px 0px #a5ccd6;
@@ -181,10 +186,10 @@ button.back {
 }
 
 
-@media (max-width: 505px) {
+/* @media (max-width: 505px) {
 	.view p {
     font-size: 0.75rem;
     padding: 0;
     font-weight: lighter;
   }
-}
+} */

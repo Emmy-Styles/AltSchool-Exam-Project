@@ -1,54 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@1,197&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700;900&display=swap");
-/* .main-footer {
-    color: #333;
-    background-color: #8ec4f0;
-    padding-top: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-family: 'Fuzzy Bubbles', cursive;
-    align-items: center;
-    justify-content: center;
-    padding-left: 20px;
-
-  }
-
-  .list-unstyled {
-    color: #ff5800;
-    align-items: center;
-    justify-content: center;
-  } */
-
-  /* .footer_main_containerr{
-    background: black;
-    width: 100%;
-    position: relative;
-  }
-
-  .footer_inner_containe{
-    position: relative;
-    width: 100%;
-  }
-
-  .footer_flex_row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 2rem;
-    width: 100%;
-    justify-content: center;
-    align-items:center;
-  } */
-  /* .social__icons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #333;
-  } */
-
-  /* .footer_flex_row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  } */
+/* .footer_main_container {
+  position: fixed !important;
+  bottom: 0;
+  right: 0;
+  margin-top: 6rem;
+} */

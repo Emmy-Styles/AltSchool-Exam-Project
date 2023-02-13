@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./Components/About/About";
 import Home from "./Components/Home/Home";
@@ -7,8 +7,9 @@ import ErrorPage from './Pages/404page'
 import RepoPage from "./Components/Repos/Repopage";
 import Layout from "./Pages/Layout";
 import { ErrorBoundary } from "react-error-boundary"
-// import Footer from "./Components/Footer/Footer";
 import Foot from "./Components/Footer/Foot";
+import Contact from "./Components/Contact/Contact";
+
 
 
 function App() {
@@ -22,21 +23,23 @@ function App() {
       </div>
 }
 
+const [ user, setUser] = useState({})
+
   return (
     <div className="App">
       <ErrorBoundary FallbackComponent={errorBoundary}>
       <Router>
         <Routes> 
           <Route path="/" element={<Layout />}>     
-          <Route index element={<Home />} />
-          <Route path="/Repos" element={<Repos />} />
-          <Route path="/repos/:name" element={<RepoPage />} />
+          <Route index element={<Home setUser={setUser} />} />
+          <Route path="/Repos" element={<Repos user={user}/>} />
+          <Route path="/repos/:name" element={<RepoPage user={user}/>} />
           <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Contact />} />
           <Route path="*" element={<ErrorPage />} />
           </Route>
         </Routes>
       </Router>
-      {/* <Footer /> */}
       <Foot />
       </ErrorBoundary>
     </div>

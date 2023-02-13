@@ -1,42 +1,108 @@
-@import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@1,197&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700;900&display=swap");
+.about {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  height: 100%;
+}
 
-.contain {
-  width: 100%;
-  background-color: #fff;
+.roww {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columnn {
+  width: 40%;
 }
 
 
-.p__header {
-  font-family: Arial, Helvetica, sans-serif;
+.columnn img {
+  background: lightseagreen;
+  border-radius: 5px;
+  width: 23rem;
+  height: 30rem;
+}
+
+
+.main-title h2 {
   color: lightseagreen;
-  border-bottom: 3px solid rgb(72, 78, 80);;
-  /* position: relative; */
-  text-align: center;
-  /* margin: 1rem auto; */
-
-  
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 1;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
 }
 
-.para{
-  width: 80%;
-  margin: 2rem auto;
-}
 
-.txt-box {
-  width: 80%;
-  margin: 1rem auto;
+.about-info h3{
   position: relative;
-  margin-bottom: 2.5rem;
-  background: rgb(187, 228, 226);
-  border-radius: 10px;
-  box-shadow: 2px 3px 2px 3px rgb(158, 164, 177);
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.62;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
 }
 
-.para p {
+.about-info h3::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 3px;
+  width: 82px;
+  background-color: lightseagreen;
+}
+
+.about-info p:first-of-type {
+  margin-bottom: 10px;
+}
+
+.about-info p {
+  line-height: 1.8;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 30px;
+}
+
+.personal-info {
   position: relative;
-  color: #333;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: small;
-  padding: 25px;
-  word-spacing: 1px;
+}
+
+.banner-btn {
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: all 0.5s;
+  color: white;
+  background-color: lightseagreen;
+  border: 2px solid lightseagreen;
+}
+
+.banner-btn:hover {
+  color: lightseagreen;
+  background: #fff;
+}
+
+
+@media screen and (max-width: 1050px) {
+  .roww {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-info {
+    padding-top: 2rem;
+  }
+  .columnn {
+    width: 90%;
+  }
+  .columnn img {
+    width: 100%;
+  }
 }

@@ -18,11 +18,11 @@ const Pagination = ({
 
   const nextPage = (e) => {
     e.preventDefault();
-    console.log(totalPosts);
 
-    if (currentPage === 2) {
+    if (currentPage === int) {
       setCurrentPage(1);
-    } else {
+    } else { 
+      
       setCurrentPage(currentPage + 1);
     }
   };
@@ -30,7 +30,7 @@ const Pagination = ({
   const prevPage = (e) => {
     e.preventDefault();
     if (currentPage === 1) {
-      setCurrentPage(2);
+      setCurrentPage(int);
     } else {
       setCurrentPage((prev) => prev - 1);
     }

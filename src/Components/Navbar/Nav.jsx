@@ -46,11 +46,12 @@ const Nav = () => {
             <li>
               <NavLink onClick={hideSidebar} to={"/"}>Home</NavLink>
             </li>
-            <li>
-              <NavLink onClick={hideSidebar} to={"/repos"}>Repos</NavLink>
-            </li>
+
             <li>
               <NavLink onClick={hideSidebar} to={"/about"}>About</NavLink>
+            </li>
+            <li>
+              <NavLink onClick={hideSidebar} to={"/Contact"}>Contact</NavLink>
             </li>
           </ul>
         </div>

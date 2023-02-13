@@ -6,14 +6,13 @@ import Pagination from "../../Pagination";
 import BeatLoader from "react-spinners/BeatLoader";
 import '../../RepoCard.css'
 
-const Repos = () => {
+const Repos = ({ user }) => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentpage] = useState(1);
-  const [pagePerShow, setPagePerShow] = useState(8);
-  // let [color, setColor] = useState("lightseagreen");
+  const [pagePerShow, setPagePerShow] = useState(6); 
 
-  const URL = "https://api.github.com/users/Emmy-Styles/repos";
+  const URL = `https://api.github.com/users/${user}/repos`;
 
   const fetchRepo = () => {
     setLoading(true);
@@ -42,7 +41,6 @@ const Repos = () => {
 
   const currentPosts = repos.slice(firstPostIndex, lastPostIndex);
   
-  
 
   return (
     <section class="service section">
@@ -58,6 +56,7 @@ const Repos = () => {
           />
         ) : (
           <div>
+            {/* <h2 className="repo__title">Xploring Repositories of { user }</h2> */}
             <RepoCard repos={currentPosts} />
           <div className="pagination">
         <Pagination

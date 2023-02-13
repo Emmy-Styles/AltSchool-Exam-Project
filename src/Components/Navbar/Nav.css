@@ -16,6 +16,12 @@ nav {
 .logo-link i.fab {
   color: white;
   font-size: 2.2rem;
+  padding-right: 3px;
+}
+
+.logo-link i.fab:hover {
+  color: rgb(230, 248, 239);
+  
 }
 
 .logo-link {
@@ -29,7 +35,13 @@ nav {
 .logo__text h3 {
   text-decoration: none;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.logo__text h3:hover {
+  color: rgb(230, 248, 239);
 }
 
 #navbar li {
